@@ -1,77 +1,173 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
-
-html, body {
-  height: 100%;
-  padding: 0;
-  margin: 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-  font-family: 'Roboto Slab', serif
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #7b4eb7;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.button {
-  color: white;
-  text-decoration: none;
-  position: relative;
-  padding: 20px 30px;
-  display: flex;
-  align-items: center;
-  transition: all .3s ease;
+/* style */
+body {
+	font: 16px/48px arial, sans-serif;
+	background-color: #eaeaea;
+	background-color: violet;
+	color: #333;
 }
 
-.button:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  border-radius: 30px;
-  background: rgba (30, 233, 186, .3);
-  width: 56px;
-  height: 56px;
-  transition: all .3s ease;
+.container {
+	width: 960px;
+	margin: auto;
+	background-color: white;
 }
 
-.button span {
-  position: relative;
-  line-height: 1;
-  font-weight: 500;
-  letter-spacing: .25rem;
-  text-transform: uppercase;
+.header {
+	padding: 20px;
+	padding-bottom: 5px;
 }
 
-.button svg {
-  position: relative;
-  top: 0;
-  margin-left: 10px;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke: white;
-  stroke-width: 2;
-  transform: translateX(-5px);
-  transition: all .3s ease;
+.header .judul {
+	font-size: 40px;
+	font-weight: bold;
+	padding-top: -10px;
 }
 
-.button:hover {
-  color: black;
+.header ul li {
+	display: inline-block;
+	margin-top: 20px;
+	margin-right: 5px;
 }
 
-.button:hover:before {
-  width: 100%;
-  background: #1ee9ba;
+.header a {
+	text-decoration: none;
+	color: salmon;
+	padding: 3px;
 }
 
-.button:hover svg {
-  stroke: black;
-  transform: translateX(0);
+.header a:hover {
+	background-color: lightskyblue;
+	color: white;
 }
 
-.button:active {
-  transform: scale(.95);
+.hero {
+	height: 400px;
+	background-image: url(love.png);
+	background-size: cover;
+	background-position: 0 -100px;
+	border-top: 5px solid lightskyblue;
+	border-bottom: 5px solid violet;
+}
+
+.main {
+	width: 600px;
+	padding: 20px;
+	box-sizing: border-box;
+	float: left;
+}
+
+.main h2 {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.main .penulis {
+	font-size: 13px;
+	margin-top: -8px;
+}
+
+.main a {
+	color: salmon;
+	text-decoration: none;
+}
+
+.main p {
+	margin-top: 20px;
+	font-size: 14px;
+	text-align: justify;
+	text-indent: 1px;
+	line-height: 25px;
+}
+
+.sidebar {
+	width: 300px;
+	float: left;
+	padding: 20px;
+}
+
+.sidebar h3 {
+	font-weight: bold;
+	color: #333;
+}
+
+.sidebar img {
+	width: 70px;
+	height: 70px;
+	padding-right: 10px;
+	float: left;
+}
+
+.sidebar p {
+	font: 12px/18px arial;
+}
+
+.footer {
+	background-color: #333;
+	padding: 7px;
+}
+
+.footer .copy {
+	color: #eaeaea;
+	text-align: center;
+	font-size: 12px;
+}
+
+/* clearfix */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
 }
